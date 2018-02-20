@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSON data to HTML table</title>
+    <title>Data Object Model</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="script.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <input type="button" onclick="func()" value="Create Table From JSON" /><br><br>
-    <input type="text" id="myInput" onkeydown="func2()" placeholder = "Search for any url..." style="display: none;">
-    <div id="showTable"></div>
+    <div class="container">
+    	<div class="row" id="myRow">
+    		<div class="col-md-6" id="myCol1">
+    			<input type="button" onclick="func1()" value="Generate Table From JSON" /><br><br>
+	    		<input type="text" id="myInput" onkeyup="func2()" placeholder = "Search for any url..." style="display: none;">
+			</div>
+			<div class="col-md-6" id="myCol2">
+				<label for="str">Enter Github URL : </label>
+				<input type="text" id="str" placeholder="Enter whole url...">
+				<br>
+				<label for="keyw">Choose the Keyword : </label>
+				<!-- <input type="text" id="keyw" placeholder="Enter appropiate keyword..."> -->
+				<select class="custom-select" id="keyw">
+			    <option selected>Choose...</option>
+			    <option value="issue_count">issues</option>
+			    <option value="branches">branches</option>
+			    <option value="contributors">contributors</option>
+			    <option value="star">star</option>
+			    <option value="commit">commit</option>
+			    <option value="watchers">watchers</option>
+			  	</select>
+				<button onclick="func3()">Search Repo</button>
+				<div id="showRes"></div>
+    		</div>
+    	</div>
+		<div id="showTable"></div>													
+		
+	</div>
+	<!-- https://github.com/angular/devkit  -->
 </body>
 </html>
+
+
+

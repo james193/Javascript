@@ -1,3 +1,9 @@
+#myCol1{
+	margin-top: 50px;
+}
+#myCol2{
+	margin-top: 10px;
+}
 table, th, td 
 {
     margin:10px 0;
@@ -7,9 +13,4 @@ table, th, td
 }
 th {
     font-weight:bold;
-}
-
-#myTable tr.header, #myTable tr:hover {
-    /* Add a grey background color to the table header and on hover */
-    background-color: #f1f1f1;
 }
